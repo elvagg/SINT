@@ -35,7 +35,7 @@ public class ProxyServer {
             URL url = new URL(weburi.toString());
             HttpURLConnection webProxyConnection
                     = (HttpURLConnection) url.openConnection();
-
+            System.out.println(weburi.toString());
             blackList.getBlackList();
             if (blackList.contains(weburi.toString())){
                 System.out.println("Forbidden URL");
@@ -150,7 +150,7 @@ public class ProxyServer {
                 connectionData.dataGot = (long)bytes.length;
 
 
-                statistics.insertData(connectionData);
+                statistics.write(connectionData);
                 System.out.println(connectionData.toString());
             }
             } catch (Exception e) {

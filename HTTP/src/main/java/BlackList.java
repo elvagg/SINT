@@ -10,7 +10,7 @@ public class BlackList {
 
 
     public LinkedList<String> getBlackList() {
-        String blackListFile = "E:\\STUDIA\\ITI\\Semestr_1\\SINT\\IdeaProjects\\src\\main\\resources\\blacklist.txt";
+        String blackListFile = "E:\\STUDIA\\ITI\\Semestr_1\\SINT\\IdeaProjects\\HTTP\\src\\main\\resources\\blacklist.txt";
         String line;
         BufferedReader br;
 

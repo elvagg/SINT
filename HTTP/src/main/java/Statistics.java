@@ -14,7 +14,7 @@ public class Statistics {
 
     private ArrayList<ConData> statistics = new ArrayList<ConData>();
 
-    private final String FILE_PATH = "E:\\STUDIA\\ITI\\Semestr_1\\SINT\\IdeaProjects\\src\\main\\resources\\statistics.csv";
+    private final String FILE_PATH = "E:\\STUDIA\\ITI\\Semestr_1\\SINT\\IdeaProjects\\HTTP\\src\\main\\resources\\statistics.csv";
 
 
     public void readDataFromFile() {
@@ -50,36 +50,31 @@ public class Statistics {
         return find;
     }
 
-    public void insertData(ConData newData){
-
-        boolean updated = false;
-        for (ConData row : statistics) {
-            if (newData.url.contains(row.url)) {
-                newData.dataGot = row.dataGot + newData.dataGot;
-                newData.dataSend = row.dataSend + newData.dataSend;
-                newData.requests = ++row.requests;
-                updated = true;
-                break;
-            }
-        }
-        if (!updated) {
-            statistics.add(newData);
-        }
+//    public void insertData(ConData newData){
+//
+//        boolean updated = false;
+//
+//        if (!updated) {
+//            statistics.add(newData);
+//        }
+//        this.write(newData);
+//    }
 
 
-
-        this.write(newData);
-
-
-    }
-
-
-    private void write(ConData newData){
+    public void write(ConData newData){
 
         try {
             Path filePath = Paths.get(FILE_PATH);
             List<String> fileContent = new ArrayList<>(Files.readAllLines(filePath, StandardCharsets.UTF_8));
 
+            for (ConData row : statistics) {
+                if (newData.url.equals(row.url)) {
+                    newData.dataGot = row.dataGot + newData.dataGot;
+                    newData.dataSend = row.dataSend + newData.dataSend;
+                    newData.requests = ++row.requests;
+                    break;
+                }
+            }
 
             boolean updated = false;
             for (int i = 0; i < fileContent.size(); i++) {
