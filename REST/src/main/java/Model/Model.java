@@ -1,5 +1,6 @@
 package Model;
 import Entities.Grade;
+import Entities.Sequence;
 import Entities.Student;
 import Entities.Subject;
 import com.mongodb.MongoClient;

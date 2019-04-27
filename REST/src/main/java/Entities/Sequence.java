@@ -1,4 +1,4 @@
-package Model;
+package Entities;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
