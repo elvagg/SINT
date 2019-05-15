@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://iim.put.poznan.pl/Szata/PP.gif">
+    <title>Grade Manager</title>
+    <style>
+        article{
+            display: none;
+        }
+        :target{
+            display: block;
+        }
+    </style>
+  </head>
+
+<body>
+  <header>
+    <h1><img src="http://iim.put.poznan.pl/Szata/PP.gif" alt="logo" width = 2.5% height = 2.5%/>Student Grade Manager</h1>
+  </header>
+
+  <nav>
+    <a href="#students">Students</a>
+    <a href="#courses">Courses</a>
+  </nav>
+
+  <article id = "students">
+    <h2>List of students</h2>
+
+    <table>
+      <tr>
+          <th>Index <input type="text" placeholder="value"></th>
+          <th>First name <input type="text" placeholder="value"></th>
+          <th>Last name <input type="text" placeholder="value"></th>
+          <th>Date <input type="date"></th>
+          <th>Actions</th>
+      </tr>
+      <tr>
+          <th><input type="text" value="127032" readonly></th>
+          <th><input type="text" value="Jan"></th>
+          <th><input type="text" value="Kowalski"></th>
+          <th><input type="date" value="1996-12-29"></th>
+          <th>
+              <input type="submit" value="Grades">
+              <input type="submit" value="Delete">
+          </th>
+      </tr>
+      <tr>
+          <th><input type="text" placeholder="Index" required="required"></th>
+          <th><input type="text" placeholder="First name" required="required"></th>
+          <th><input type="text" placeholder="Last name" required="required"></th>
+          <th><input type="date" required="required"></th>
+          <th>
+              <input type="submit" value="Add">
+          </th>
+      </tr>
+    </table>
+  </article>
+
+  <article id = "grades">
+
+  </article>
+
+  <article id = "courses">
+    <h2>List of courses</h2>
+    <table>
+      <tr>
+          <th>Course</th>
+          <th>Tutor</th>
+          <th>Grade</th>
+          <th>Actions</th>
+      </tr>
+      <tr>
+        <th><select>
+            <option value="volvo">abc</option>
+            <option value="saab">cde</option>
+            <option value="mercedes">efg</option>
+            <option value="audi">ghi</option>
+        </select></th>
+        <th><input type="text" placeholder="Tutor" required="required"></th>
+        <th><input type="number" placeholder="2.0" min="2.0" max="5.0" step="0.5" required="required"></th>
+        <th><input type="date" required="required"></th>
+        <th>
+            <input type="submit" value="Add">
+        </th>
+      </tr>
+    </table>
+  </article>
+
+  <footer>
+    <p>Paulina Warkocka, 127090</p>
+    <p><a href="https://www.put.poznan.pl/">Politechnika Poznańska</a>
+    <a href="https://fc.put.poznan.pl/index.php">Wydział informatyki</a></p>
+  </footer>
+</body>
+</html>
+
+<!-- tu jest ładny footer -->
+<!-- <style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #01A1FE;
+  color: white;
+  text-align: center;
+}
+</style> -->

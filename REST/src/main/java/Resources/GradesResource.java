@@ -46,7 +46,7 @@ public class GradesResource {
                 default: break;
             }
         }
-        if (query.asList().isEmpty()) throw new NotFoundException();
+//        if (query.asList().isEmpty()) throw new NotFoundException();
         return query.asList();
     }
 

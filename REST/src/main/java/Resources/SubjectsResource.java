@@ -78,9 +78,11 @@ public class SubjectsResource {
         Query<Subject> query = model.getDatastore().createQuery(Subject.class).field("subject_id").equal(Integer.parseInt(id));
         if (query != null) {
             Query<Student> students_query = model.getDatastore().createQuery(Student.class);
+            Query<Grade> grades_query = model.getDatastore().createQuery(Grade.class).field("subjectId").equal(Integer.parseInt(id));
             List<Grade> grades_to_delete = model.getDatastore().createQuery(Grade.class).field("subject").hasThisOne(query.get()).asList();
             UpdateOperations<Student> ops = model.getDatastore().createUpdateOperations(Student.class).removeAll("grades", grades_to_delete);
             model.getDatastore().update(students_query, ops);
+            model.getDatastore().delete(grades_query);
             model.getDatastore().findAndDelete(query);
             return Response.status(200).build();
         }
