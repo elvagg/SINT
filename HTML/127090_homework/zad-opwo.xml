@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<metalink xmlns='urn:ietf:params:xml:ns:metalink'>
+  <published>2019-05-31 01:06:50</published>
+  <file name='daemon-26940.out.log'>
+    <size>4923061</size>
+    <hash type='md5'>a6b0a9c549e595ebfefdabb881691406</hash>
+    <url>http://zad-opwo.com/download/daemon-26940.out.log</url>
+  </file>
+  <file name='registry.bin'>
+    <size>585</size>
+    <hash type='md5'>23bd9746a5c9364e5d84b41ab4aea347</hash>
+    <url>http://zad-opwo.com/download/registry.bin</url>
+  </file>
+  <file name='registry.bin.lock'>
+    <size>17</size>
+    <hash type='md5'>8231c9ea039ef6af36528770ad67fb49</hash>
+    <url>http://zad-opwo.com/download/registry.bin.lock</url>
+  </file>
+  <file name='zad-opwo.xml'>
+    <size>1293</size>
+    <hash type='md5'>7d89b70e9965a974288fbb981738f134</hash>
+    <url>http://zad-opwo.com/download/zad-opwo.xml</url>
+  </file>
+</metalink>

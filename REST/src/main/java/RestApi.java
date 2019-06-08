@@ -1,4 +1,5 @@
 import Model.Model;
+import Model.CustomHeaders;
 import Resources.GradesResource;
 import Resources.StudentsResource;
 import Resources.SubjectsResource;
@@ -19,7 +20,9 @@ public class RestApi {
         config.register(DeclarativeLinkingFeature.class);
         config.register(SubjectsResource.class);
         config.register(GradesResource.class);
+        config.register(CustomHeaders.class);
         HttpServer server = GrizzlyHttpServerFactory.createHttpServer(baseUri, config);
     }
 }
+
 

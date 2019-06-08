@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://iim.put.poznan.pl/Szata/PP.gif">
+    <title>Grade Manager</title>
+    <style>
+        article{
+            display: none;
+        }
+        :target{
+            display: block;
+        }
+    </style>
+  </head>
+
+<body>
+  <header>
+    <h1><img src="http://iim.put.poznan.pl/Szata/PP.gif" alt="logo" width = 40 height = 40>Student Grade Manager</h1>
+  </header>
+  <hr>
+
+  <div class = "pagestyle">
+
+    <div class = "sidenav_buttons_layout">
+      <div class = "sidenav_button"><a href="#students">Students</a></div>
+      <div class = "sidenav_button"><a href="#courses">Courses</a></div>
+      <div class = "sidenav_button"><a href="#grades">Grades</a></div>
+    </div>
+
+    <div>
+    <article id = "students">
+      <h2>List of students</h2>
+
+      <table id = "custom_table">
+        <tr>
+            <th>Index<input type="text" placeholder="value"></th>
+            <th>First name<input type="text" placeholder="value"></th>
+            <th>Last name<input type="text" placeholder="value"></th>
+            <th>Date<input type="date"></th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td><input type="text" value="127032" readonly></td>
+            <td><input type="text" value="Jan"></td>
+            <td><input type="text" value="Kowalski"></td>
+            <td><input type="date" value="1996-12-29"></td>
+            <td>
+                <input type="submit" value="Grades">
+                <input type="submit" value="Delete">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Index" required="required"></td>
+            <td><input type="text" placeholder="First name" required="required"></td>
+            <td><input type="text" placeholder="Last name" required="required"></td>
+            <td><input type="date" required="required"></td>
+            <td>
+                <input type="submit" value="Add">
+            </td>
+        </tr>
+      </table>
+    </article>
+
+    <article id = "grades">
+      <h2>List of grades</h2>
+      <table id = "grades_table">
+        <tr>
+            <th>Course<input type="text" placeholder="value"></th>
+            <th>Grade<input type="text" placeholder="value"></th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+          <td><input type="text" value="Systemy Internetowe"></td>
+          <td><input type="number" value="5.0"></td>
+          <td><input type="date" value="2019-05-30"></td>
+          <td>
+              <input type="submit" value="Delete">
+          </td>
+        <tr>
+          <td><select>
+              <option value="volvo">abc</option>
+              <option value="saab">cde</option>
+              <option value="mercedes">efg</option>
+              <option value="audi">ghi</option>
+          </select></td>
+          <td><input type="number" placeholder="2.0" min="2.0" max="5.0" step="0.5" required="required"></td>
+          <td><input type="date" required="required"></td>
+          <td>
+              <input type="submit" value="Add">
+          </td>
+        </tr>
+      </table>
+    </article>
+
+    <article id = "courses">
+      <h2>List of courses</h2>
+      <table id = "courses_table">
+        <tr>
+            <th>Course<input type="text" placeholder="value"></th>
+            <th>Teacher<input type="text" placeholder="value"></th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td><input type="text" value="Systemy Internetowe"></td>
+            <td><input type="text" value="Tomasz Pawlak"></td>
+            <td>
+                <input type="submit" value="Delete">
+            </td>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="Course" required="required"></td>
+          <td><input type="text" placeholder="Teacher" required="required"></td>
+          <td>
+              <input type="submit" value="Add">
+          </td>
+        </tr>
+      </table>
+    </article>
+
+    </div>
+
+    <div class = "footer">
+      <p>Paulina Warkocka, 127090</p>
+      <p><a href="https://www.put.poznan.pl/">Politechnika Poznańska</a>
+      <a href="https://fc.put.poznan.pl/index.php">Wydział informatyki</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- tu jest ładny footer -->
+<!-- <style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #01A1FE;
+  color: white;
+  text-align: center;
+}
+</style> -->

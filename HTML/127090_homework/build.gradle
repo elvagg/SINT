@@ -1,0 +1,7 @@
+import org.opwo.gradle.Metalink
+
+tasks.register('metalink', Metalink) {
+	fileSet = "."
+	url = "http://zad-opwo.com/download"
+	outputFile = "zad-opwo.xml"
+}
